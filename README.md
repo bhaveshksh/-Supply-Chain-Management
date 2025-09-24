@@ -1,66 +1,70 @@
-** Supply Chain Management **
+Supply Chain Management Analysis
 
-This project focuses on analyzing supply chain management data to uncover insights that improve efficiency, cost management, and decision-making. The dataset used contained 100 records and 24 features, covering aspects such as product type, lead time, revenue, costs, routes, and distribution channels.
+This project focuses on analyzing supply chain management data to uncover insights that improve efficiency, cost management, and decision-making. The dataset contains 100 records and 24 features, covering aspects such as product type, lead time, revenue, costs, routes, and distribution channels.
 
-* Through exploratory data analysis (EDA), the project examined:
+🔍 Project Objectives
+The analysis explores:
+1. Revenue trends across lead times, routes, and product categories.
+2. Cost variations by product type, shipping mode, and distribution channel.
+3. Profitability insights combining revenue and cost perspectives.
+4. Operational performance factors like lead time, supplier reliability, and competitor pricing.
 
-1. Revenue trends across different lead times, routes, and product categories.
-2. Cost analysis, identifying variations by product type and distribution path.
-3. Route performance, evaluating revenue distribution and profitability.
-4. Product comparisons, highlighting which categories contribute most to revenue and which incur higher costs.
+📊 Dataset Overview
 
-* Key findings revealed that:
+## Rows: 100
+## Columns: 24
+## Features include: product details, pricing, sales, revenue, lead times, shipping routes, supply chain costs, competitor pricing, market demand, and seasonality.
+## 📂 Dataset
+You can download the dataset from [Google Drive](https://drive.google.com/file/d/1Vb01ZNOkWKe4A7TqixPlapuC1_P-fPj8/view?usp=drive_link).
 
-1. Certain routes consistently generate higher revenue, suggesting optimization opportunities in logistics.
-2. Product type significantly influences both revenue and cost, making product-specific strategies crucial.
-3. Shorter lead times correlate with higher revenue generation, indicating efficiency in supply chain flow.
+⚙️ Technologies Used
 
-Key Findings and Analyses
-1. Total Shipping Costs by Supplier
-The analysis aggregates the total shipping costs for each supplier. This insight is crucial for identifying which suppliers incur the highest shipping expenses, which is an important metric for cost management and negotiation.
+## Python (Google Colab / Jupyter Notebook)
+## Libraries:
 
-* Code Used: df.groupby("Supplier name")["Shipping costs"].sum()
-* Purpose: To calculate and compare the total shipping costs for each supplier.
+pandas – data manipulation
 
-2. Defect Rates by Inspection Result
-This analysis calculates the average defect rate for each inspection result category (Pass, Fail, Pending). This helps in understanding the quality control process and identifying trends in product defects.
+numpy – numerical analysis
 
-* Code Used: df.groupby("Inspection results")["Defect rates"].mean()
-* Purpose: To determine the average defect rate for products based on their inspection outcome.
+matplotlib & seaborn – data visualization
 
-3. Most Common Transportation Modes
-This part of the analysis identifies the most frequently used transportation modes by counting the occurrences of each mode and sorting them in descending order.
+🚀 How to Run
 
-* Code Used: df.groupby("Transportation modes").size().sort_values(ascending=False)
-* Purpose: To understand the logistics and transportation patterns within the supply chain.
+Clone the repository:
 
-4. Cost vs. Revenue Analysis
-A scatter plot is used to visualize the relationship between revenue and costs, with data points colored by product type. This helps to check if higher costs are associated with higher revenue and if different product categories show distinct patterns. The analysis also computes the correlation coefficient between these two variables.
+git clone <your-repo-link>
+cd supply-chain-management
 
-* Code Used: sns.scatterplot(x="Revenue generated", y="Costs", hue="Product type", data=df) and df["Revenue generated"].corr(df["Costs"])
-* Purpose: To explore the relationship between the cost of a product and the revenue it generates, and to identify product categories that may have unique cost-revenue dynamics.
 
-5. Distribution of Key Numerical Variables
-The project uses both histograms and boxplots to visualize the distribution and statistical summary of key numerical columns such as Costs, Lead time, Stock levels, and Shipping times.
+Install required libraries:
 
-* Histograms: Shows the frequency distribution of each variable to identify the data's central tendency and spread.
-* Boxplots: Provides a five-number summary (minimum, first quartile, median, third quartile, and maximum) and helps in identifying potential outliers.
-* Code Used: sns.histplot(...) and sns.boxplot(...) within a loop.
-* Purpose: To get a quick statistical overview of key performance indicators and identify any anomalies.
+pip install pandas numpy matplotlib seaborn
 
-6. Correlation Heatmap
-A correlation heatmap is generated to visualize the relationships between all numerical variables in the dataset. This helps in quickly identifying which pairs of variables have strong positive or negative correlations.
 
-* Code Used: sns.heatmap(numeric_df.corr(), annot=True, cmap='viridis')
-* Purpose: To understand the multi-variate relationships and dependencies within the data.
+Open the notebook:
 
-7. Automated Data Profiling Report
-The project also includes an automated data profiling report generated by the ydata-profiling library. This report is a comprehensive overview of the dataset's structure, quality, and statistical properties.
+jupyter notebook 97c4ee5e-3244-4807-97d2-71399bc9b450.ipynb
 
-** Key Sections of the Report:
-* Overview: Summarizes the number of variables, observations, missing values, and duplicate rows.
-* Variables: Provides a detailed profile for each column, including its type, descriptive statistics, and a visualization of its distribution.
-* Interactions: Explores relationships between numerical variables through visualizations.
-* Correlations: Displays a heatmap of various correlation coefficients (e.g., Pearson, Spearman) to show linear and monotonic relationships.
-* Code Used: profile = ProfileReport(df, ...) and profile.to_file(...)
-* Purpose: To provide a quick and thorough overview of the dataset without manual, cell-by-cell analysis.
+📈 Key Insights
+
+Revenue and cost vary significantly by route and product category.
+
+Certain distribution channels show higher profitability despite longer lead times.
+
+Competitor pricing and demand seasonality influence performance trends.
+
+📌 Example Visualizations
+
+Revenue by product type and shipping mode
+
+Cost distribution across suppliers and regions
+
+Lead time vs profitability analysis
+
+🤝 Contributing
+
+Feel free to fork this repo and submit pull requests to enhance the analysis.
+
+📄 License
+
+This project is licensed under the MIT License.
