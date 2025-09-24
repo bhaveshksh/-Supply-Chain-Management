@@ -1,4 +1,5 @@
-** Supply Chain Management
+** Supply Chain Management **
+
 This project focuses on analyzing supply chain management data to uncover insights that improve efficiency, cost management, and decision-making. The dataset used contained 100 records and 24 features, covering aspects such as product type, lead time, revenue, costs, routes, and distribution channels.
 
 * Through exploratory data analysis (EDA), the project examined:
@@ -18,9 +19,8 @@ Key Findings and Analyses
 1. Total Shipping Costs by Supplier
 The analysis aggregates the total shipping costs for each supplier. This insight is crucial for identifying which suppliers incur the highest shipping expenses, which is an important metric for cost management and negotiation.
 
-Code Used: df.groupby("Supplier name")["Shipping costs"].sum()
-
-Purpose: To calculate and compare the total shipping costs for each supplier.
+* Code Used: df.groupby("Supplier name")["Shipping costs"].sum()
+* Purpose: To calculate and compare the total shipping costs for each supplier.
 
 2. Defect Rates by Inspection Result
 This analysis calculates the average defect rate for each inspection result category (Pass, Fail, Pending). This helps in understanding the quality control process and identifying trends in product defects.
