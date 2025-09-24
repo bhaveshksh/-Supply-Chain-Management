@@ -58,9 +58,11 @@ Feel free to fork this repo and submit pull requests to enhance the analysis.
 🔗 Connect with Me 🤝
 Feel free to connect with me for collaborations or any questions related to Data Analysis World
 
-LinkedIn: [(https://www.linkedin.com/in/bhaveshkshirsagar/)]
-Email: [(bhaveshkshirsagar50@gmail.com)]
+🔗 LinkedIn: [(https://www.linkedin.com/in/bhaveshkshirsagar/)]
+
+🔗 Email: [(bhaveshkshirsagar50@gmail.com)]
 💻 GitHub Repository
+
 Explore the complete source code of this project on GitHub: 
 
-GitHub Repo Link: 
+GitHub Repo Link: [(https://github.com/bhaveshksh/Supply-Chain-Management/tree/main)]
